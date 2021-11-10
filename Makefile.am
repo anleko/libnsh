@@ -7,7 +7,7 @@ EXAMPLES        =
 if ENABLE_EXAMPLES
   EXAMPLES     += examples
 endif
-SUBDIRS         = src $(EXAMPLES) tests
+SUBDIRS         = src $(EXAMPLES) test
 
 # Generate MD5 checksum file
 MD5 = md5sum
