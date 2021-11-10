@@ -1,5 +1,6 @@
 ACLOCAL_AMFLAGS = -I m4
-EXTRA_DIST      = LICENSE README.md autogen.sh
+doc_DATA        = LICENSE ChangeLog.md README.md
+EXTRA_DIST      = LICENSE ChangeLog.md README.md autogen.sh
 pkgconfigdir    = $(libdir)/pkgconfig
 pkgconfig_DATA  = libnsh.pc
 EXAMPLES        =
