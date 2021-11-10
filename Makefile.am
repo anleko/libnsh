@@ -1,13 +1,12 @@
 ACLOCAL_AMFLAGS = -I m4
-
+EXTRA_DIST      = LICENSE README.md autogen.sh
+pkgconfigdir    = $(libdir)/pkgconfig
+pkgconfig_DATA  = libnsh.pc
 EXAMPLES        =
 if ENABLE_EXAMPLES
   EXAMPLES     += examples
 endif
-
 SUBDIRS         = src $(EXAMPLES) tests
-
-EXTRA_DIST      = LICENSE README.md autogen.sh
 
 # Generate MD5 checksum file
 MD5 = md5sum

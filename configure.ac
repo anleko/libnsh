@@ -20,6 +20,6 @@ AM_CONDITIONAL([ENABLE_EXAMPLES], [test "$enable_examples" = yes])
 AM_CONDITIONAL([HAVE_CHECK],      [test "$have_check"      = yes])
 
 AC_CONFIG_HEADERS([config.h])
-AC_CONFIG_FILES([Makefile src/Makefile examples/Makefile tests/Makefile])
+AC_CONFIG_FILES([Makefile src/Makefile examples/Makefile tests/Makefile libnsh.pc])
 
 AC_OUTPUT
