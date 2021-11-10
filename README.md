@@ -1,5 +1,5 @@
 # libnsh
-[![Build Status](https://travis-ci.org/jonasj76/libnsh.svg?branch=master)](https://travis-ci.org/jonasj76/libnsh)
+[![License Badge][]][License] [![GitHub Status][]][GitHub]
 
 Net-SNMP helper C-library.
 
@@ -213,4 +213,14 @@ data and the table data list is updated.
     entry->next = table_head;
     table_head  = entry;
 
-[1]: http://jonasj76.github.io/libnsh
+## Origin & References
+
+libnsh was [originally created][1] by Jonas Johansson while at Westermo.
+This project is the continuation with added .pc file and minor bug fixes
+only.
+
+[1]:             https://jonasj76.github.io/libnsh
+[License]:       https://en.wikipedia.org/wiki/MIT_License
+[License Badge]: https://img.shields.io/badge/License-MIT-teal.svg
+[GitHub]:        https://github.com/westermo/libnsh/actions/workflows/build.yml/
+[GitHub Status]: https://github.com/westermo/libnsh/actions/workflows/build.yml/badge.svg
