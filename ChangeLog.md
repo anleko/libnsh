@@ -6,13 +6,15 @@ All notable changes to this project will be documented in this file.
 > **Note:** releases up to v0.3 were made by Jonas and are available for
 >           download from https://github.com/jonasj76/libnsh/releases/
 
-[v0.4][UNRELEASED]
-------------------
+[v0.4][] - 2021-11-10
+---------------------
 
 ### Changes
 - Forked by Westermo
 - Add libnsh.pc file, for easier integration with `pkg-config`
 - Use GitHub Actions to automate build and release handling
+- Add doc/HACKING.md release and maintenance checklist
+- Add support for `NSH_TABLE_ENTRY_NOTSUPPORTED()` macro
 
 
 [v0.3][] - 2016-06-21

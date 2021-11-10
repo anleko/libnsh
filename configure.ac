@@ -1,5 +1,5 @@
 AC_PREREQ([2.61])
-AC_INIT([libnsh], [0.4-dev], [https://github.com/westermo/libnsh/issues])
+AC_INIT([libnsh], [0.4], [https://github.com/westermo/libnsh/issues])
 AC_CONFIG_AUX_DIR(auxdata)
 AM_INIT_AUTOMAKE([1.11 foreign -W -Wall -Wextra])
 AM_SILENT_RULES([yes])
