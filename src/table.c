@@ -206,8 +206,12 @@ static void __mode_get(netsnmp_agent_request_info *reqinfo,
 	for (request = requests; request; request = request->next) {
 		table_info = netsnmp_extract_table_info(request);
 
-		if (table_info->colnum <= table_sz)
-			__mode_get_req(reqinfo, request, &table[table_info->colnum-1]);
+		if (table_info->colnum <= table_sz) {
+			if (!&table[table_info->colnum - 1].supported)
+				netsnmp_set_request_error (reqinfo, request, SNMP_NOSUCHOBJECT);
+			else
+				__mode_get_req(reqinfo, request, &table[table_info->colnum-1]);
+		}
 		else
 			netsnmp_request_set_error(request, SNMP_NOSUCHOBJECT);
 	}

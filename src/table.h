@@ -74,6 +74,7 @@ typedef struct nsh_table_entry_t {
 	int ofs;
 	int isstring;
 	int (*set_cb)(long idx, void *value);
+	int supported;
 } nsh_table_entry_t;
 
 /**
@@ -84,11 +85,13 @@ typedef struct nsh_table_entry_t {
  * @_isstring   : Element is a string.
  */
 #define NSH_TABLE_ENTRY(_type, _struct, _obj,  _isstring, _set_cb) \
-	{.type = _type, .len = ENTRY_SIZE(_struct, _obj), .ofs = offsetof(struct _struct, _obj), .isstring = _isstring, .set_cb = _set_cb}
+	{.type = _type, .len = ENTRY_SIZE(_struct, _obj), .ofs = offsetof(struct _struct, _obj), .isstring = _isstring, .set_cb = _set_cb, .supported = 1}
 #define NSH_TABLE_ENTRY_RO(_type, _struct, _obj, _isstring) \
 	NSH_TABLE_ENTRY(_type, _struct, _obj, _isstring, NULL)
 #define NSH_TABLE_ENTRY_RW(_type, _struct, _obj, _isstring, _set_cb) \
 	NSH_TABLE_ENTRY(_type, _struct, _obj, _isstring, _set_cb)
+#define NSH_TABLE_ENTRY_NOTSUPPORTED(_struct, _obj) \
+	{.type = 0, .len = 0, .ofs = offsetof(struct _struct, _obj), .isstring = 0, .supported = 0}
 
 /**
  * nsh_register_table_ro - Register a read-only table handler
