@@ -3,11 +3,11 @@
 
 Net-SNMP helper C-library.
 
-Coding MIBs can be a long and troblesome process. Much of the code for
-different OIDs may also look the same except for minor segments that handles
-the actual requested OID value. This library will try to simplify the MIB coding
-by offer a simple API that hides the duplicated code parts and only focus on the
-parts that is needed to get the actual value for a specific OID.
+Implementing MIBs can be a long and bothersome process. Much of the code for
+different OIDs is often identical boilerplate, save for the small parts that
+actually handle the requested value. This library will try to simplify the MIB
+implementation by offering a simple API that hides the duplicated code parts and
+lets the developer focus on the parts that are important.
 
 ## Build and installation
 `libnsh` uses GNU's autotools as its build system.
